@@ -406,20 +406,4 @@ body {
         padding: 0 10px !important;
     }
 
-    /* Fixes the individual boxes (like the Documentation box in your screenshot) */
-    .mv-box, 
-    .feature-box, 
-    .service-item {
-        width: 100% !important;
-        max-width: none !important;
-        flex: none !important;
-        margin-bottom: 10px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Force the main container to stop horizontal overflow */
-    body, html {
-        overflow-x: hidden !important;
-        position: relative;
-    }
-}
+   
