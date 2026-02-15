@@ -395,3 +395,31 @@ body {
         height: 250px !important;
     }
 }
+.mission-grid, 
+    .services-grid,
+    .features-grid { 
+        display: flex !important;
+        flex-direction: column !important; /* Stacks them vertically */
+        gap: 20px !important;
+        width: 100% !important;
+        overflow-x: hidden !important; /* KILLS the side-scrolling */
+        padding: 0 10px !important;
+    }
+
+    /* Fixes the individual boxes (like the Documentation box in your screenshot) */
+    .mv-box, 
+    .feature-box, 
+    .service-item {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
+        margin-bottom: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Force the main container to stop horizontal overflow */
+    body, html {
+        overflow-x: hidden !important;
+        position: relative;
+    }
+}
