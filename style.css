@@ -395,15 +395,51 @@ body {
         height: 250px !important;
     }
 }
-.mission-grid, 
-    .services-grid,
-    .features-grid { 
+.mission-grid {
         display: flex !important;
-        flex-direction: column !important; /* Stacks them vertically */
+        flex-direction: column !important; /* Stacks the grid boxes vertically */
+        align-items: center !important;
         gap: 20px !important;
         width: 100% !important;
-        overflow-x: hidden !important; /* KILLS the side-scrolling */
-        padding: 0 10px !important;
+        overflow-x: hidden !important; /* Prevents the horizontal scroll glitch */
+        padding: 0 !important;
     }
 
+    .mv-box {
+        width: 90% !important; /* Fits the box to the screen width */
+        max-width: 100% !important;
+        flex: none !important;
+        box-sizing: border-box !important;
+        margin: 0 auto;
+    }
+
+    /* 4. Netflix Slider Fix (Home Page) */
+    .netflix-slider {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .service-card {
+        width: 90% !important;
+        flex: none !important;
+    }
+
+    /* 5. Contact Section Fix (Home Page) */
+    .contact-flex-wrapper {
+        flex-direction: column !important;
+    }
+
+    .contact-info-centered, 
+    .contact-map-box {
+        width: 100% !important;
+    }
+
+    /* 6. Global Overflow Prevention */
+    html, body {
+        overflow-x: hidden !important; /* Final safety to ensure no side-scrolling */
+        width: 100%;
+    }
+}
    
