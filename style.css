@@ -329,9 +329,9 @@ body {
     align-items: center;
     gap: 8px;
 }
-/* --- FINAL RESPONSIVE FIX --- */
-/* --- FINAL RESPONSIVE FIX --- */
+/* --- UNIVERSAL MOBILE RESPONSIVE FIX --- */
 @media (max-width: 768px) {
+    /* 1. Header & Navigation Fixes */
     .main-header {
         height: auto !important; 
         padding: 15px 0 !important;
@@ -339,7 +339,7 @@ body {
 
     .header-container {
         flex-direction: column !important; 
-        gap: 10px !important;
+        gap: 15px !important;
     }
 
     .logo-text {
@@ -347,41 +347,51 @@ body {
         text-align: center;
     }
 
-    .nav-box {
-        margin-right: 0 !important;
-        width: 100%;
-    }
-
     .nav-links {
         justify-content: center !important;
-        gap: 12px !important;
+        gap: 10px !important;
         flex-wrap: wrap; 
     }
 
-    .hero-section h2 {
-        font-size: 24px !important; 
-    }
-
-    /* --- FIX FOR CONTENT & PHOTO STACKING --- */
+    /* 2. Content & Image Stacking (Applies to ALL pages) */
     .about-flex, .contact-flex-wrapper {
-        flex-direction: column !important; /* Forces vertical stack */
-        gap: 30px !important;
+        flex-direction: column !important; /* This stops the "squeezed" look */
+        gap: 25px !important;
     }
 
-    .about-image, .about-text-container {
-        width: 100% !important; /* Ensures text uses full screen width */
+    .about-text-container, .about-image {
+        width: 100% !important; /* Text and photo now take full width */
         flex: none !important;
     }
 
+    /* 3. Image Styling for Mobile */
     .about-image img {
         width: 100% !important;
-        max-width: 400px; /* Prevents image from being too huge on tablets */
+        height: auto !important;
+        max-height: 350px;
+        object-fit: cover;
+        border-radius: 8px;
         display: block;
-        margin: 0 auto; /* Centers the photo */
+        margin: 0 auto;
     }
 
+    /* 4. Text & Heading Adjustments */
     .about-text-container h2 {
-        text-align: center !important; /* Looks better on mobile */
-        font-size: 24px !important;
+        font-size: 26px !important; /* Smaller headings for mobile screens */
+        text-align: center !important;
+        margin-bottom: 15px;
+    }
+
+    .about-text-container p {
+        text-align: justify;
+        font-size: 15px !important;
+        line-height: 1.6;
+        padding: 0 10px; /* Prevents text from touching screen edges */
+    }
+
+    /* 5. Contact Map Fix */
+    .contact-map-box {
+        width: 100% !important;
+        height: 250px !important;
     }
 }
