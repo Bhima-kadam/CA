@@ -330,19 +330,20 @@ body {
     gap: 8px;
 }
 /* --- FINAL RESPONSIVE FIX --- */
+/* --- FINAL RESPONSIVE FIX --- */
 @media (max-width: 768px) {
     .main-header {
-        height: auto !important; /* Allows header to grow to fit logo and menu */
+        height: auto !important; 
         padding: 15px 0 !important;
     }
 
     .header-container {
-        flex-direction: column !important; /* Stacks everything vertically */
+        flex-direction: column !important; 
         gap: 10px !important;
     }
 
     .logo-text {
-        margin-left: 0 !important; /* Centers the name */
+        margin-left: 0 !important; 
         text-align: center;
     }
 
@@ -354,57 +355,33 @@ body {
     .nav-links {
         justify-content: center !important;
         gap: 12px !important;
-        flex-wrap: wrap; /* Keeps links inside the screen */
+        flex-wrap: wrap; 
     }
 
     .hero-section h2 {
-        font-size: 24px !important; /* Shrinks the big welcome text */
+        font-size: 24px !important; 
     }
-}
-.nav-links a {
-    padding: 5px 2px; /* Gives links a little more breathing room */
-}
-.about-text-container p {
-        padding: 0 5px;        /* Prevents text from hitting the screen edge */
-        font-size: 16px;       /* Slightly smaller for better mobile reading */
+
+    /* --- FIX FOR CONTENT & PHOTO STACKING --- */
+    .about-flex, .contact-flex-wrapper {
+        flex-direction: column !important; /* Forces vertical stack */
+        gap: 30px !important;
     }
-.service-page h2 {
-    font-size: 28px; /* Adjust this number to make it as small as you like */
-    margin-bottom: 15px;
-    text-align: left; /* Keeps service headings left-aligned as requested */
-}
-/* --- PROFESSIONAL PAGE TARGETING --- */
 
-/* A. Style for ALL Service Pages (Accounting, GST, etc.) */
-.service-page .about-text-container h2 {
-    font-size: 26px !important; /* Smaller, professional heading */
-    text-align: left !important;
-    margin-top: 0;
-}
+    .about-image, .about-text-container {
+        width: 100% !important; /* Ensures text uses full screen width */
+        flex: none !important;
+    }
 
-.service-page .about-text-container {
-    text-align: left;
-}
+    .about-image img {
+        width: 100% !important;
+        max-width: 400px; /* Prevents image from being too huge on tablets */
+        display: block;
+        margin: 0 auto; /* Centers the photo */
+    }
 
-/* B. Style for About Us Page ONLY (The "Middle" Look) */
-.about-page-layout .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.about-page-layout .about-flex {
-    flex-direction: column; /* Stacks image and text in the middle */
-    gap: 30px;
-}
-
-.about-page-layout .about-text-container h2 {
-    text-align: center !important;
-    width: 100%;
-}
-
-.about-page-layout .about-text-container p {
-    max-width: 850px; /* Keeps text from getting too wide in the middle */
-    margin: 0 auto;
+    .about-text-container h2 {
+        text-align: center !important; /* Looks better on mobile */
+        font-size: 24px !important;
+    }
 }
