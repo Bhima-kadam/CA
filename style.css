@@ -1,0 +1,410 @@
+/* --- VARIABLES --- */
+:root {
+    --navy: #002b5c;
+    --blue: #0d6efd;
+    --gold: #C5A059;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --text-grey: #444444;
+}
+
+/* --- RESET & BASE --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    overflow-x: hidden; 
+    background-color: var(--white);
+}
+
+/* --- HEADER & LOGO --- */
+/* --- UPDATED HEADER & LOGO --- */
+/* --- FIXED HEADER & LOGO --- */
+/* --- FIXED HEADER & LOGO --- */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: beige !important; /* Force the beige background */
+    min-height: 80px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    width: 100%;
+    max-width: 98%; /* This pushes content to the extreme corners */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: -10px; 
+    cursor: pointer;
+    background: transparent !important; /* Ensure no white box here */
+}
+
+.main-logo { 
+    height: 80px; /* Logo fits inside the 80px header */
+    width: auto; 
+    /* THIS REMOVES THE LOGO WHITE BG */
+    mix-blend-mode: multiply; 
+    filter: contrast(120%) brightness(105%); 
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align text to the center near logo */
+    margin-left: -25px; /* Pull text block closer to the CA image */
+}
+/* Anil Associates Fonts*/
+.logo-text h1 { 
+    font-size: 20px; 
+    color: #002b5c; /* Your Navy color */
+    font-weight: 700; 
+    margin: 0; 
+    line-height: 1;
+}
+/*Charted Accoount font*/
+.logo-text span { 
+    font-size: 13px; 
+    color: green; 
+    text-transform: uppercase; 
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --- NAV LINKS CORNER ALIGNMENT --- */
+.nav-box {
+    margin-right: 10px; /* Keeps links pinned to the right corner */
+}
+/* --- NAVIGATION --- */
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 25px; 
+    align-items: center; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #444; 
+    font-weight: 600; 
+    font-size: 15px; 
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active { 
+    color: var(--blue); 
+}
+
+/* Dropdown Menu */
+.dropdown { position: relative; }
+
+.dropdown-menu { 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background: white; 
+    min-width: 220px; 
+    display: none; 
+    list-style: none; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+    border-top: 3px solid var(--blue);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu { display: block; }
+
+.dropdown-menu li a { 
+    padding: 12px 20px; 
+    display: block; 
+    border-bottom: 1px solid #eee; 
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover { 
+    background: var(--light-bg); 
+    color: var(--blue); 
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/bg5.jpeg');
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center;
+}
+
+.hero-section h2 { font-size: 42px; margin-bottom: 10px; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);}
+
+
+/* --- COMMON LAYOUT --- */
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    display: block; /* Ensures pages default to standard left-alignment */
+}
+.section-padding { padding: 80px 0; }
+
+/* --- ABOUT SECTION --- */
+.about-flex {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image { flex: 1; }
+.about-image img { 
+    width: 100%; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+}
+
+.about-text-container { flex: 1.2; }
+.about-text-container h2 { 
+    margin-bottom: 20px; 
+    color: var(--navy); 
+    font-size: 36px; 
+    font-weight: 700; 
+}
+
+.about-text-container p { 
+    font-size: 17px; 
+    color: var(--text-grey); 
+    line-height: 1.8;
+    text-align: justify;       /* This justifies the text */
+    text-justify: inter-word;  /* This helps spacing look professional */
+}
+
+/* --- SERVICES SLIDER (Netflix Style) --- */
+.services-bg { background: var(--light-bg); padding: 80px 0; }
+.center-title { text-align: center; margin-bottom: 40px; font-size: 32px; color: var(--navy); }
+
+.netflix-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 5px;
+    scrollbar-width: none; /* Firefox */
+    scroll-snap-type: x mandatory;
+}
+.netflix-slider::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+.service-card {
+    flex: 0 0 280px;
+    height: 380px;
+    background: white;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+}
+
+.service-card:hover { 
+    transform: scale(1.05); /* Netflix-style zoom */
+}
+
+.service-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.service-card h3 {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    padding: 25px 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white; 
+    text-align: center; 
+    font-size: 18px;
+    margin: 0;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-flex-wrapper { 
+    display: flex;
+    gap: 50px; 
+    align-items: center;
+}
+
+.contact-info-centered { flex: 1; }
+.contact-info-centered h2 { 
+    margin-bottom: 25px; 
+    color: var(--navy); 
+    font-size: 36px; 
+}
+
+.contact-details p { font-size: 18px; margin-bottom: 15px; color: var(--text-grey); }
+
+.contact-map-box { 
+    flex: 1.5; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    height: 400px;
+}
+.contact-map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- FOOTER --- */
+.main-footer { 
+    background: var(--navy); 
+    color: white; 
+    text-align: center; 
+    padding: 40px 20px; 
+}
+
+/* --- RESPONSIVE --- */
+
+/* --- MISSION & VISION BOX MODEL --- */
+.mission-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mv-box {
+    flex: 1;
+    background: var(--white);
+    padding: 40px;
+    border-top: 5px solid var(--navy); /* Navy border at top */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.mv-box:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--blue); /* Changes to blue on hover */
+}
+
+.mv-box h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* --- FINAL RESPONSIVE FIX --- */
+@media (max-width: 768px) {
+    .main-header {
+        height: auto !important; /* Allows header to grow to fit logo and menu */
+        padding: 15px 0 !important;
+    }
+
+    .header-container {
+        flex-direction: column !important; /* Stacks everything vertically */
+        gap: 10px !important;
+    }
+
+    .logo-text {
+        margin-left: 0 !important; /* Centers the name */
+        text-align: center;
+    }
+
+    .nav-box {
+        margin-right: 0 !important;
+        width: 100%;
+    }
+
+    .nav-links {
+        justify-content: center !important;
+        gap: 12px !important;
+        flex-wrap: wrap; /* Keeps links inside the screen */
+    }
+
+    .hero-section h2 {
+        font-size: 24px !important; /* Shrinks the big welcome text */
+    }
+}
+.nav-links a {
+    padding: 5px 2px; /* Gives links a little more breathing room */
+}
+.about-text-container p {
+        padding: 0 5px;        /* Prevents text from hitting the screen edge */
+        font-size: 16px;       /* Slightly smaller for better mobile reading */
+    }
+.service-page h2 {
+    font-size: 28px; /* Adjust this number to make it as small as you like */
+    margin-bottom: 15px;
+    text-align: left; /* Keeps service headings left-aligned as requested */
+}
+/* --- PROFESSIONAL PAGE TARGETING --- */
+
+/* A. Style for ALL Service Pages (Accounting, GST, etc.) */
+.service-page .about-text-container h2 {
+    font-size: 26px !important; /* Smaller, professional heading */
+    text-align: left !important;
+    margin-top: 0;
+}
+
+.service-page .about-text-container {
+    text-align: left;
+}
+
+/* B. Style for About Us Page ONLY (The "Middle" Look) */
+.about-page-layout .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-page-layout .about-flex {
+    flex-direction: column; /* Stacks image and text in the middle */
+    gap: 30px;
+}
+
+.about-page-layout .about-text-container h2 {
+    text-align: center !important;
+    width: 100%;
+}
+
+.about-page-layout .about-text-container p {
+    max-width: 850px; /* Keeps text from getting too wide in the middle */
+    margin: 0 auto;
+}
