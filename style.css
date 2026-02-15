@@ -23,17 +23,14 @@ body {
     background-color: var(--white);
 }
 
-/* --- HEADER & LOGO --- */
-/* --- UPDATED HEADER & LOGO --- */
-/* --- FIXED HEADER & LOGO --- */
 /* --- FIXED HEADER & LOGO --- */
 .main-header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-    background-color: beige !important; /* Force the beige background */
-    min-height: 80px; /* Fixed height for consistency */
+    background-color: beige !important;
+    min-height: 80px;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -41,7 +38,7 @@ body {
 
 .header-container {
     width: 100%;
-    max-width: 98%; /* This pushes content to the extreme corners */
+    max-width: 98%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -54,13 +51,12 @@ body {
     align-items: center;
     gap: -10px; 
     cursor: pointer;
-    background: transparent !important; /* Ensure no white box here */
+    background: transparent !important;
 }
 
 .main-logo { 
-    height: 80px; /* Logo fits inside the 80px header */
+    height: 80px;
     width: auto; 
-    /* THIS REMOVES THE LOGO WHITE BG */
     mix-blend-mode: multiply; 
     filter: contrast(120%) brightness(105%); 
     object-fit: contain;
@@ -70,18 +66,18 @@ body {
 .logo-text {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align text to the center near logo */
-    margin-left: -25px; /* Pull text block closer to the CA image */
+    align-items: center;
+    margin-left: -25px;
 }
-/* Anil Associates Fonts*/
+
 .logo-text h1 { 
     font-size: 20px; 
-    color: #002b5c; /* Your Navy color */
+    color: #002b5c;
     font-weight: 700; 
     margin: 0; 
     line-height: 1;
 }
-/*Charted Accoount font*/
+
 .logo-text span { 
     font-size: 13px; 
     color: green; 
@@ -90,11 +86,8 @@ body {
     margin-top: 2px;
 }
 
-/* --- NAV LINKS CORNER ALIGNMENT --- */
-.nav-box {
-    margin-right: 10px; /* Keeps links pinned to the right corner */
-}
 /* --- NAVIGATION --- */
+.nav-box { margin-right: 10px; }
 .nav-links { 
     display: flex; 
     list-style: none; 
@@ -110,13 +103,10 @@ body {
     transition: 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active { 
-    color: var(--blue); 
-}
+.nav-links a:hover, .nav-links a.active { color: var(--blue); }
 
 /* Dropdown Menu */
 .dropdown { position: relative; }
-
 .dropdown-menu { 
     position: absolute; 
     top: 100%; 
@@ -129,7 +119,6 @@ body {
     border-top: 3px solid var(--blue);
     z-index: 100;
 }
-
 .dropdown:hover .dropdown-menu { display: block; }
 
 .dropdown-menu li a { 
@@ -137,11 +126,6 @@ body {
     display: block; 
     border-bottom: 1px solid #eee; 
     font-size: 14px;
-}
-
-.dropdown-menu li a:hover { 
-    background: var(--light-bg); 
-    color: var(--blue); 
 }
 
 /* --- HERO SECTION --- */
@@ -156,16 +140,13 @@ body {
     color: white; 
     text-align: center;
 }
-
-.hero-section h2 { font-size: 42px; margin-bottom: 10px; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);}
-
+.hero-section h2 { font-size: 42px; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
 
 /* --- COMMON LAYOUT --- */
 .container { 
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 0 20px; 
-    display: block; /* Ensures pages default to standard left-alignment */
 }
 .section-padding { padding: 80px 0; }
 
@@ -175,43 +156,27 @@ body {
     gap: 50px;
     align-items: center;
 }
-
 .about-image { flex: 1; }
-.about-image img { 
-    width: 100%; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
-}
+.about-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
 
 .about-text-container { flex: 1.2; }
-.about-text-container h2 { 
-    margin-bottom: 20px; 
-    color: var(--navy); 
-    font-size: 36px; 
-    font-weight: 700; 
-}
-
+.about-text-container h2 { margin-bottom: 20px; color: var(--navy); font-size: 36px; }
 .about-text-container p { 
     font-size: 17px; 
     color: var(--text-grey); 
-    line-height: 1.8;
-    text-align: justify;       /* This justifies the text */
-    text-justify: inter-word;  /* This helps spacing look professional */
+    line-height: 1.8; 
+    text-align: justify; 
 }
 
 /* --- SERVICES SLIDER (Netflix Style) --- */
-.services-bg { background: var(--light-bg); padding: 80px 0; }
-.center-title { text-align: center; margin-bottom: 40px; font-size: 32px; color: var(--navy); }
-
 .netflix-slider {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding: 20px 5px;
-    scrollbar-width: none; /* Firefox */
-    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
-.netflix-slider::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+.netflix-slider::-webkit-scrollbar { display: none; }
 
 .service-card {
     flex: 0 0 280px;
@@ -222,246 +187,81 @@ body {
     overflow: hidden;
     transition: transform 0.4s ease;
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    scroll-snap-align: start;
 }
-
-.service-card:hover { 
-    transform: scale(1.05); /* Netflix-style zoom */
-}
-
+.service-card:hover { transform: scale(1.05); }
 .service-card img { width: 100%; height: 100%; object-fit: cover; }
-
 .service-card h3 {
-    position: absolute; 
-    bottom: 0; 
-    width: 100%; 
-    padding: 25px 15px;
+    position: absolute; bottom: 0; width: 100%; padding: 25px 15px;
     background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    color: white; 
-    text-align: center; 
-    font-size: 18px;
-    margin: 0;
+    color: white; text-align: center; font-size: 18px;
 }
 
-/* --- CONTACT SECTION --- */
-.contact-flex-wrapper { 
-    display: flex;
-    gap: 50px; 
-    align-items: center;
-}
-
-.contact-info-centered { flex: 1; }
-.contact-info-centered h2 { 
-    margin-bottom: 25px; 
-    color: var(--navy); 
-    font-size: 36px; 
-}
-
-.contact-details p { font-size: 18px; margin-bottom: 15px; color: var(--text-grey); }
-
-.contact-map-box { 
-    flex: 1.5; 
-    border-radius: 12px; 
-    overflow: hidden; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
-    height: 400px;
-}
-.contact-map-box iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* --- FOOTER --- */
-.main-footer { 
-    background: var(--navy); 
-    color: white; 
-    text-align: center; 
-    padding: 40px 20px; 
-}
-
-/* --- RESPONSIVE --- */
-
-/* --- MISSION & VISION BOX MODEL --- */
+/* --- MISSION & VISION (Grid Layout for Service Pages) --- */
 .mission-grid {
     display: flex;
     gap: 30px;
     margin-top: 40px;
 }
-
 .mv-box {
     flex: 1;
     background: var(--white);
     padding: 40px;
-    border-top: 5px solid var(--navy); /* Navy border at top */
+    border-top: 5px solid var(--navy);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     text-align: center;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
+.mv-box:hover { transform: translateY(-10px); border-top-color: var(--blue); }
 
-.mv-box:hover {
-    transform: translateY(-10px);
-    border-top-color: var(--blue); /* Changes to blue on hover */
-}
-
-.mv-box h3 {
-    color: var(--navy);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-size: 22px;
-}
-
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-/* --- UNIVERSAL MOBILE RESPONSIVE FIX --- */
-@media (max-width: 768px) {
-    /* 1. Header & Navigation Fixes */
-    .main-header {
-        height: auto !important; 
-        padding: 15px 0 !important;
-    }
-
-    .header-container {
-        flex-direction: column !important; 
-        gap: 15px !important;
-    }
-
-    .logo-text {
-        margin-left: 0 !important; 
-        text-align: center;
-    }
-
-    .nav-links {
-        justify-content: center !important;
-        gap: 10px !important;
-        flex-wrap: wrap; 
-    }
-
-    /* 2. Content & Image Stacking (Applies to ALL pages) */
-    .about-flex, .contact-flex-wrapper {
-        flex-direction: column !important; /* This stops the "squeezed" look */
-        gap: 25px !important;
-    }
-
-    .about-text-container, .about-image {
-        width: 100% !important; /* Text and photo now take full width */
-        flex: none !important;
-    }
-
-    /* 3. Image Styling for Mobile */
-    .about-image img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 350px;
-        object-fit: cover;
-        border-radius: 8px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    /* 4. Text & Heading Adjustments */
-    .about-text-container h2 {
-        font-size: 26px !important; /* Smaller headings for mobile screens */
-        text-align: center !important;
-        margin-bottom: 15px;
-    }
-
-    .about-text-container p {
-        text-align: justify;
-        font-size: 15px !important;
-        line-height: 1.6;
-        padding: 0 10px; /* Prevents text from touching screen edges */
-    }
-
-    /* 5. Contact Map Fix */
-    .contact-map-box {
-        width: 100% !important;
-        height: 250px !important;
-    }
-}
-.mission-grid {
-        display: flex !important;
-        flex-direction: column !important; /* Stacks the grid boxes vertically */
-        align-items: center !important;
-        gap: 20px !important;
-        width: 100% !important;
-        overflow-x: hidden !important; /* Prevents the horizontal scroll glitch */
-        padding: 0 !important;
-    }
-
-    .mv-box {
-        width: 90% !important; /* Fits the box to the screen width */
-        max-width: 100% !important;
-        flex: none !important;
-        box-sizing: border-box !important;
-        margin: 0 auto;
-    }
-
-    /* 4. Netflix Slider Fix (Home Page) */
-    .netflix-slider {
-        display: flex;
-        flex-direction: column !important;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .service-card {
-        width: 90% !important;
-        flex: none !important;
-    }
-
-    /* 5. Contact Section Fix (Home Page) */
-    .contact-flex-wrapper {
-        flex-direction: column !important;
-    }
-
-    .contact-info-centered, 
-    .contact-map-box {
-        width: 100% !important;
-    }
-
-    /* 6. Global Overflow Prevention */
-    html, body {
-        overflow-x: hidden !important; /* Final safety to ensure no side-scrolling */
-        width: 100%;
-    }
-}
-/* Container for the Map */
-.contact-map-box {
+/* --- CONTACT SECTION & MAP --- */
+.contact-flex-wrapper { display: flex; gap: 50px; align-items: center; }
+.contact-map-box { 
+    flex: 1.5; 
     width: 100%;
     height: 450px;
-    border-radius: 12px; /* Rounded corners like your screenshot */
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Soft shadow for a professional look */
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin-top: 20px;
 }
+.contact-map-box iframe { width: 100%; height: 100%; border: 0; }
 
-/* Ensure the iframe fills the container */
-.contact-map-box iframe {
-    width: 100%;
-    height: 100%;
+.whatsapp-float {
+    position: fixed; bottom: 20px; right: 20px;
+    background-color: #25d366; color: white;
+    padding: 10px 20px; border-radius: 50px;
+    text-decoration: none; font-weight: bold;
+    z-index: 1000; display: flex; align-items: center; gap: 8px;
 }
 
-/* Mobile Fix (IMPORTANT) */
+/* --- UNIVERSAL MOBILE RESPONSIVE FIX --- */
 @media (max-width: 768px) {
-    .contact-map-box {
-        height: 300px; /* Smaller height on phones */
+    .header-container { flex-direction: column; gap: 15px; }
+    .logo-text { margin-left: 0; text-align: center; }
+    .nav-links { justify-content: center; gap: 10px; flex-wrap: wrap; }
+
+    /* Home Page: Keep Slider Horizontal */
+    .netflix-slider {
+        display: flex !important;
+        flex-direction: row !important; 
+        overflow-x: auto !important; 
     }
+
+    /* Service Pages: Stack Grids Vertically */
+    .mission-grid {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+    }
+    .mv-box { width: 100% !important; margin-bottom: 20px; }
+
+    .about-flex, .contact-flex-wrapper { flex-direction: column !important; }
+    
+    /* Map Height Adjustment for Mobile */
+    .contact-map-box { height: 300px !important; }
+
+    html, body { overflow-x: hidden !important; width: 100%; }
 }
-   
+
+.main-footer { background: var(--navy); color: white; text-align: center; padding: 40px 20px; }
